@@ -63,7 +63,7 @@ ALTER SEQUENCE public.comet_comet_id_seq OWNED BY public.comet.comet_id;
 CREATE TABLE public.galaxy (
     galaxy_id integer NOT NULL,
     name character varying(100) NOT NULL,
-    galaxy_type text,
+    galaxy_type text NOT NULL,
     age_in_millions_of_years integer,
     description text
 );
@@ -139,7 +139,7 @@ CREATE TABLE public.planet (
     name character varying(100) NOT NULL,
     star_id integer NOT NULL,
     has_life boolean,
-    distance_from_earth numeric
+    distance_from_earth integer
 );
 
 
@@ -436,5 +436,4 @@ ALTER TABLE ONLY public.star
 --
 -- PostgreSQL database dump complete
 --
-
 
